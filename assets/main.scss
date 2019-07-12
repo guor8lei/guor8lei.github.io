@@ -1,9 +1,9 @@
 ---
 ---
 
-$text-color: #46433A;
-$anchor-text-color: #CE534D;
-$background-color: #F1EED9;
+$text-color: #00303F;
+$anchor-text-color: #C53211;
+$background-color: #CAE4DB;
 
 body {
 	font-family: 'Vollkorn', serif;
@@ -28,10 +28,11 @@ a:hover,
 a:active {
 	color: $anchor-text-color;
 	text-decoration: none;
+	font-weight: normal;
 }
 
 a:hover {
-	text-decoration: underline;
+	font-weight: bolder;
 }
 
 
@@ -118,6 +119,10 @@ footer {
 		width: 480px;
 		margin: 10% auto 0 auto;
 	}
+
+	.link-list{
+		text-align: center;
+	}
 }
 
 /* All other devices (768px and up) */
@@ -125,14 +130,14 @@ footer {
 	/* past 768px the layout is changed and the wrapper has a fixed width of 680px
 	to accomodate both the header column and the content column */
 	.wrapper {
-		width: 680px;
+		width: 768px;
 	}
 
 	/* the header column stays left and has a dynamic width with all contents
 	aligned right */
 	header {
 		float: left;
-		width: 46%;
+		width: 42%;
 		text-align: right;
 	}
 
@@ -143,8 +148,11 @@ footer {
 	}
 
 	main {
-		width: 46%;
+		width: 65%;
 		margin-left: 54%;
-		padding: 0;
+	}
+
+	.link-list{
+		text-align: right;
 	}
 }
