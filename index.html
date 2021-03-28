@@ -1,55 +1,58 @@
 ---
 layout: base
 ---
+
 <div class="wrapper">
-    <header>
-        {% if site.compass.logo %}
-        <div class="logo-container">
-          <a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.baseurl }}{{ site.compass.logo }}')"></a>
-        </div>
-        {% endif %}
+  <header>
+    {% if site.compass.logo %}
+    <div class="logo-container">
+      <span
+        class="logo"
+        style="background-image: url('{{ site.baseurl }}{{ site.compass.logo }}')"
+      ></span>
+    </div>
+    {% endif %} {% if site.compass.author %}
+    <div class="author-container"><h1>{{ site.compass.author }}</h1></div>
+    {% endif %} {% if site.compass.tagline %}
+    <div class="tagline-container"><p>{{ site.compass.tagline }}</p></div>
+    {% endif %}
 
-        {% if site.compass.author %}
-        <div class="author-container"><h1>{{ site.compass.author }}</h1></div>
-        {% endif %}
-
-        {% if site.compass.tagline %}
-        <div class="tagline-container"><p>{{ site.compass.tagline }}</p></div>
-        {% endif %}
-
-        <hr>
-
-        <div class="link-list">
-          <ul class="fa-ul main-list">
-            <li class="main-list-item">
-              <a href="assets/GuoRaymondResume.pdf" target="_">Resume</a>
-              <span class="fa fa-file fa-lg main-list-item-icon"></span>
-            </li>
-            <li class="main-list-item">
-                <a href="https://github.com/guor8lei" target="_">GitHub</a>
-                <span class="fa fa-github fa-lg main-list-item-icon"></span>
-            </li>
-            <li class="main-list-item">
-                <a href="https://www.linkedin.com/in/raymond-guo/" target="_">LinkedIn</a>
-                <span class="fa fa-linkedin fa-lg main-list-item-icon"></span>
-            </li>
-            <li class="main-list-item">
-              <a href="http://raymondguo.me/blog/">Blog</a>
-              <span class="fa fa-film fa-med main-list-item-icon"></span>
-            </li>
-            <li class="main-list-item">
-                <a href="mailto:guor.lei@berkeley.edu" target="_">Contact</a>
-                <span class="fa fa-user fa-lg main-list-item-icon"></span>
-            </li>
-          </ul>
-        </div>
-
-    </header>
-    <main>
-      {% if site.compass.include_content %}
-      <div class="content">
-        {% include content.html %}
-      </div>
-      {% endif %}
-    </main>
+    <div class="link-list">
+      <a href="assets/GuoRaymondResume.pdf" target="_">Resume</a> ·
+      <a href="https://github.com/guor8lei" target="_">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/raymond-guo/" target="_">LinkedIn</a>
+      · <a href="http://raymondguo.me/blog/">Blog</a> ·
+      <a href="mailto:guor.lei@gmail.com" target="_">Contact</a>
+      <!-- <ul class="fa-ul main-list">
+        <li class="main-list-item">
+          <a href="assets/GuoRaymondResume.pdf" target="_"
+            ><span class="fa fa-file fa-lg main-list-item-icon"></span
+          ></a>
+        </li>
+        <li class="main-list-item">
+          <a href="https://github.com/guor8lei" target="_"
+            ><span class="fa fa-github fa-lg main-list-item-icon"></span
+          ></a>
+        </li>
+        <li class="main-list-item">
+          <a href="https://www.linkedin.com/in/raymond-guo/" target="_"></a>
+            <span class="fa fa-linkedin fa-lg main-list-item-icon"></span
+          ></a>
+        </li>
+        <li class="main-list-item">
+          <a href="http://raymondguo.me/blog/"><span class="fa fa-film fa-med main-list-item-icon"></span></a>
+     
+        </li>
+        <li class="main-list-item">
+          <a href="mailto:guor.lei@berkeley.edu" target="_">Contact</a>
+          <span class="fa fa-user fa-lg main-list-item-icon"></span>
+        </li>
+      </ul> -->
+    </div>
+  </header>
+  <main>
+    {% if site.compass.include_content %}
+    <div class="content">{% include content.html %}</div>
+    {% endif %}
+  </main>
 </div>
